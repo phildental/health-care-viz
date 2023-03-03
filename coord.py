@@ -1,6 +1,5 @@
 import pandas as pd
 import requests
-from pandasgui import show
 import requests_cache 
 
 # Define the URL and API key
@@ -23,3 +22,5 @@ def get_countries_coordinates(metrics_df):
         country_df = pd.json_normalize(data['results'][0])
         results_df = pd.concat([results_df, country_df], ignore_index=True)
         results_df = results_df.iloc[:, :4]
+        
+    return results_df

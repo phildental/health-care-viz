@@ -1,5 +1,4 @@
 import pandas as pd
-from pandasgui import show
 import requests
 import requests_cache
 from coord import get_countries_coordinates
@@ -44,3 +43,12 @@ countries_df.columns = ['CountryCode', 'CountryName']
 
 # Merge the DataFrames
 metrics_df = countries_df.merge(telehealth_df, left_on='CountryCode', right_on='CountryCode')
+
+
+merged_df = get_countries_coordinates(metrics_df)
+
+
+# Merge Countries Coord. with metrics_df
+countriescoord_df = merged_df.merge(metrics_df, left_on='formatted', right_on='CountryName')
+
+print(countriescoord_df.head(100))
