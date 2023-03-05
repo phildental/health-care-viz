@@ -1,3 +1,4 @@
-.heath-care-env
+.health-care-env
 /secrets.txt
-/dataset-1
+/dataset.csv
+.vscode
