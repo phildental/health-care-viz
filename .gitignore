@@ -1,3 +1,4 @@
 .health-care-env
 /secrets.txt
 /dataset.csv
+/http_cache.sqlite
