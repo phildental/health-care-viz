@@ -51,4 +51,5 @@ merged_df = get_countries_coordinates(metrics_df)
 # Merge Countries Coord. with metrics_df
 countriescoord_df = merged_df.merge(metrics_df, left_on='formatted', right_on='CountryName')
 
+#Export to csv
 countriescoord_df.to_csv("/Users/felipemarques/Documents/GitHub/health-care-viz/dataset.csv", index=False)
